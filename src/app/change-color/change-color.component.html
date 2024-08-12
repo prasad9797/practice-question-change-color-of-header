@@ -1,0 +1,15 @@
+<h2>Result example</h2>
+<h3 style="color: {{ headerColor }}">
+  Complete Angular Tutorial For Beginners
+</h3>
+@for(item of data; track item.color){
+<div class="card">
+  <p>{{ item.body }}</p>
+  <button
+    style="background-color: {{ item.color }}; color: white"
+    (click)="setColor(item.color)"
+  >
+    {{ item.color }}
+  </button>
+</div>
+}
